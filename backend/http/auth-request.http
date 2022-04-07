@@ -1,0 +1,21 @@
+ ### 
+ POST https://<gitlab>/oauth/token HTTP/1.1
+ Content-Type: application/x-www-form-urlencoded
+ 
+ client_id=
+ &client_secret=
+ &code=
+ &grant_type=authorization_code
+ &redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fauth%2Fgitlab%2Fcallback
+ 
+ ###
+ GET https://<gitlab>/oauth/userinfo
+     ?access_token=
+
+###
+GET http://localhost:3000/api/
+Authorization: Bearer <token>
+Content-Type: application/json
+Cache-Control: no-cache, no-store, must-revalidate
+###
+
